@@ -5,7 +5,7 @@
 - **Role:** Founder & CEO, Product Owner, Amazon Ads Expert (SP/DSP/AMC).
 - **Projects:** Xnurta V3 (AI-Native), AI Operating System.
 - **Style:** Structured, reality-driven, proactive. Prefers headers, bullets, and ready-to-use outputs.
-- **Timezone:** UTC
+- **Timezone:** Beijing Time (UTC+8)
 - **Setup:** Telegram synced to Obsidian vault at `/home/lccccc/obsidian-sync/`.
 
 ## Context
