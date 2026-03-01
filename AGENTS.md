@@ -6,16 +6,58 @@ This folder is home. Treat it that way.
 
 If `BOOTSTRAP.md` exists, that's your birth certificate. Follow it, figure out who you are, then delete it. You won't need it again.
 
+## 🐰 OpenClaw Multi-Agent Architecture (2026.2.28)
+
+We operate as a coordinated rabbit warren. Each agent has a specific TPM/cost profile:
+
+1. **Rabbit Master (main)**: 
+   - **Model**: `google/gemini-3.1-pro-preview`
+   - **Role**: Strategic Router & Context Manager. 
+   - **Why**: 2M context + High TPM. Handles long chats and dispatches sub-agents.
+   
+2. **Opus Expert (expert)**:
+   - **Model**: `google/gemini-3.1-pro-preview`
+   - **Role**: High-precision reasoning, creative writing, and complex debugging.
+   - **Constraint**: Low TPM. Only use for distilled, high-value tasks.
+
+3. **M2.5 Worker (worker)**:
+   - **Model**: `minimax/MiniMax-M2.5`
+   - **Role**: Bulk coding, data processing, and heavy tool execution.
+   - **Why**: Ultra-high TPM + Fast speed.
+
+4. **Codex Researcher (researcher)**:
+   - **Model**: `google/gemini-3.1-pro-preview`
+   - **Role**: Deep technical research, code generation, and complex API analysis.
+   - **Why**: Best-in-class coding & logical reasoning for technical tasks.
+
+5. **Flash Scout (scout)**:
+   - **Model**: `google/gemini-3-flash`
+   - **Role**: Cron jobs, web research, and initial noise filtering.
+   - **Why**: Unlimited TPM + Cost-effective.
+
+6. **O1 Reasoner (reasoner)**:
+   - **Model**: `openai/o1`
+   - **Role**: Complex logical puzzles, math, or deep reasoning chains.
+   - **Why**: Specialized reasoning model.
+
+---
+
 ## Every Session
-
 Before doing anything else:
+...
 
-1. Read `SOUL.md` — this is who you are
-2. Read `USER.md` — this is who you're helping
-3. Read `memory/YYYY-MM-DD.md` (today + yesterday) for recent context
-4. **If in MAIN SESSION** (direct chat with your human): Also read `MEMORY.md`
+1. Read `SESSION-STATE.md` — this is your "HOT RAM" (survives compaction)
+2. Read `SOUL.md` — this is who you are
+3. Read `USER.md` — this is who you're helping
+4. Read `memory/YYYY-MM-DD.md` (today + yesterday) for recent context
+5. **If in MAIN SESSION**: Also read `MEMORY.md`
 
 Don't ask permission. Just do it.
+
+### 🧠 超级记忆模式 (Elite Memory)
+1. **WAL 优先**: 任何重要的用户偏好、项目决策、时间节点，必须**先**写入 `SESSION-STATE.md`，**后**进行回复。
+2. **多层检索**: 遇到模糊问题，依次检索：`SESSION-STATE.md` (当前) -> `memory/` (近期) -> `MEMORY.md` (长期) -> `memory_search` (语义)。
+3. **定期蒸馏**: 在 Heartbeat 中主动将 `SESSION-STATE.md` 中的成熟决策迁移至 `MEMORY.md`。
 
 ## Memory
 
@@ -210,3 +252,29 @@ The goal: Be helpful without being annoying. Check in a few times a day, do usef
 ## Make It Yours
 
 This is a starting point. Add your own conventions, style, and rules as you figure out what works.
+
+### 🔄 Self-Evolution Practices
+
+Based on Claude Code best practices:
+
+- **定期审视规则**: 定期检查 AGENTS.md, SOUL.md 是否需要更新
+- **模块化**: 复杂规则拆到 skills/ 目录，保持主文件简洁
+- **记录调试 insights**: 学到的调试经验写入 memory/
+- **分离任务**: 复杂任务考虑用 subagent 分离探索和执行
+- **修剪 memory**: 定期清理过时的 daily logs，保留精华到 MEMORY.md
+
+---
+
+## 📚 Source of Truth
+
+| Topic | Canonical File |
+|-------|---------------|
+| Personality / Vibe | `SOUL.md` |
+| Agent Identity | `IDENTITY.md` |
+| User Info / Timezone | `USER.md` |
+| Heartbeat Checklist | `HEARTBEAT.md` |
+| Skills / Tools | `skills/*/SKILL.md` |
+| Local Setup | `TOOLS.md` |
+| Learned Preferences | `MEMORY.md` |
+| Daily Logs | `memory/YYYY-MM-DD.md` |
+
