@@ -39,12 +39,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "兔兔你可以看到吗.md",
+                "file": "Welcome.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "兔兔你可以看到吗"
+              "title": "Welcome"
             }
           }
         ],
@@ -213,7 +213,7 @@
   },
   "active": "e6cf6efbd73c5f30",
   "lastOpenFiles": [
-    "Welcome.md",
-    "兔兔你可以看到吗.md"
+    "兔兔你可以看到吗.md",
+    "Welcome.md"
   ]
 }
