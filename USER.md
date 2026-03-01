@@ -1,17 +1,14 @@
 # USER.md - About Your Human
 
-_Learn about the person you're helping. Update this as you go._
-
-- **Name:**
-- **What to call them:**
-- **Pronouns:** _(optional)_
-- **Timezone:**
-- **Notes:**
+- **Name:** LC
+- **What to call them:** LC
+- **Role:** Founder & CEO, Product Owner, Amazon Ads Expert (SP/DSP/AMC).
+- **Projects:** Xnurta V3 (AI-Native), AI Operating System.
+- **Style:** Structured, reality-driven, proactive. Prefers headers, bullets, and ready-to-use outputs.
+- **Timezone:** UTC
+- **Setup:** Telegram synced to Obsidian vault at `/home/lccccc/obsidian-sync/`.
 
 ## Context
-
-_(What do they care about? What projects are they working on? What annoys them? What makes them laugh? Build this over time.)_
-
----
-
-The more you know, the better you can help. But remember — you're learning about a person, not building a dossier. Respect the difference.
+- High focus on Amazon retail media and AI activation rates.
+- Uses AI as a second brain and execution partner.
+- Rejects abstract theory; demands scenarios.
