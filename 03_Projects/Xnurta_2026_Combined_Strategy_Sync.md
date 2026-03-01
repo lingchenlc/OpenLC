@@ -20,7 +20,7 @@ SLG 战线明确要求 **"Strategically move away from SMB"**，并将整个 SMB
 - **策略抓手**：Focus on High PMF Segments (聚焦高契合度客群)。
 - **签对合同**：“Right contract for right clients”。用超预期的服务（包含 AI 和高级 Features 两部分）把客户的 LTV 拉高。
 - **服务覆盖机制演进**：建立基于生命周期的客户旅程追踪：
-  - **M1 到 M4 的深度管理**：Onboarding 阶段被单独提取并重视，实施 Monthly Business Review，向客户输出深度的广告策略咨询 (Ads Strategy Consultation) 和月度表现审查。
+  - **M1 到 M12 贯穿全年的长线生命周期管理**：Onboarding 阶段被单独提取并重视，实施 Monthly Business Review，向客户输出深度的广告策略咨询 (Ads Strategy Consultation) 和月度表现审查。
 
 ### 3. 北极星指标：Retention (续费率)
 - **基线数据**：2025年 30天试用期截留率已稳定在 75% 以上。但是活跃分布(Active Rate)极度不均，且发现老定价对 SOHO 过高（导致功能闲置）。
