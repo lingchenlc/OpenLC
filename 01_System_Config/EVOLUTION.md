@@ -30,6 +30,35 @@
 - **效果：** [预期]
 ```
 
+## 🛡️ 防崩盘条款 (Post-Mortem)
+
+### 2026-02-28: Anthropic Provider 配置空值导致启动失败
+
+**事件回顾**
+- 时间: 2026-02-28 01:42:01 - 07:48 (约6小时)
+- 错误: `models.providers.anthropic.baseUrl: Invalid input: expected string, received undefined`
+- 根因: 配置文件 `~/.openclaw/openclaw.json` 中 `models.providers.anthropic` 被设为 `null`
+- 影响: 系统每7秒尝试启动一次然后失败，循环约3000次
+
+**归因分析**
+1. 直接原因：配置文件中 `anthropic` provider 为 `null` 而非有效对象
+2. 根本原因：手动修改配置时未校验 JSON 完整性，或被某次 `openclaw doctor --fix` 错误覆盖
+3. 教训：配置修改后未自动验证有效性
+
+**预防措施**
+
+1. 配置校验：每天启动时执行 `openclaw doctor --fix`
+2. 配置备份：修改配置前自动备份 `cp ~/.openclaw/openclaw.json ~/.openclaw/openclaw.json.bak.$(date +%Y%m%d)`
+3. 启动预检：cron 启动脚本中添加配置有效性检查，无效则自动恢复备份
+4. 配置模板锁定：核心 provider 配置不允许设为 null
+
+**修复命令**
+```bash
+jq '.models.providers.anthropic = { "apiKey": "YOUR_KEY", "baseUrl": "https://api.anthropic.com" }' ~/.openclaw/openclaw.json > tmp.json && mv tmp.json ~/.openclaw/openclaw.json
+```
+
+---
+
 ## 当前版本
 - **Version:** 1.0.1
 - **最后更新:** 2026-03-01
