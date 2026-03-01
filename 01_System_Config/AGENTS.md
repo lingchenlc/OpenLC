@@ -278,3 +278,15 @@ Based on Claude Code best practices:
 | Learned Preferences | `MEMORY.md` |
 | Daily Logs | `memory/YYYY-MM-DD.md` |
 
+
+
+## [CRITICAL] 报告落版铁律 (Obsidian First)
+- **绝对禁止使用 Notion API**: 如果用户或者后台触发长篇分析、项目汇总、人物档案或者日志生成，绝对不允许再使用  后台请求 Notion 接口或使用复杂的 block JSON 结构。
+- **飞书等前台通道的做法**: 所有分析结果只要形成了文字大纲，应当直接写成  (Markdown) 格式保存在  的子目录下，然后让底层 Git 挂载去同步给 LC 本人的手机。
+- 写入完成后，在飞书等前端界面仅回复短平快的状态报告，如：“报告已脱水，保存在 03_Projects/XXX.md”。切勿在实时聊天框全量输出超大上下文。
+## [CRITICAL] 报告落版铁律 (Obsidian / GitHub First)
+- **封杀 Notion 类复杂请求**: 如果你负责进行长篇大论的数据抓取与分析（例如员工盘点、周报等），不要去跟 Notion 或其他需要高度构造 JSON blocks 的花哨第三方应用较劲，以节约 Token 消耗及防丢断电。
+- **飞书与本地智能体标准操作**: 
+  1. 通过飞书或其他前端执行完分析后，使用 `write` 命令，将整理好的纯中文 Markdown 文本，直接保存在 `/home/lccccc/.openclaw/workspace/OpenLC/` 的分级目录（如 `03_Projects` 或 `04_People_CRM`）中。
+  2. 交由服务器上的守护进程通过 Git 同步到 LC 的设备上。
+  3. 执行完本地写入后，**飞书助手仅仅需要做“电报式”的交差回复**（例如：“分析完成，长篇结论已脱水存在 Xnurta_Report.md，请在你的 Obsidian 中查阅”）。切不可在聊天框长篇大论以免触发打字限流断联。
