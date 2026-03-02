@@ -4,7 +4,8 @@
 - **What to call them:** LC
 - **Role:** Founder & CEO, Product Owner, Amazon Ads Expert (SP/DSP/AMC).
 - **Projects:** Xnurta V3 (AI-Native), AI Operating System.
-- **Style:** Structured, reality-driven, proactive. Prefers headers, bullets, and ready-to-use outputs.
+- **Format**: Structured (Headers, Bullets, Tables), Feishu Interactive Cards for schedules.
+- **Channels**: Work -> Feishu, Life -> Telegram.
 - **Timezone:** Beijing Time (UTC+8)
 - **Setup:** Telegram synced to Obsidian vault at `/home/lccccc/obsidian-sync/`.
 
