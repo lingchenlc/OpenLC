@@ -9,6 +9,7 @@
   - Yolo Yu: 个人目标已完成，转向 GTM 岗位支援。
   - 庞彦: **Offer 已发** (P4, 18-20k, 归属 Team Enterprise)
   - 面试中: 胡狄 (3/7 11:00), 胡欢欢 (3/2 17:00 P1)
+  - 待启动: 郭淑君 (Amazon ESM 背景, 15k+ 卖家扶持经验, 40w package)
 
 ## 📌 8月份远期规划 (August Targets)
 - **核心目标**: **CSM 团队招聘大爆发**
